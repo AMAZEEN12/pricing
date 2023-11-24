@@ -1,0 +1,127 @@
+body{
+    background: url(midnight.jpg);
+    background-size: cover;
+    font-family: 'Arvo', serif;
+font-family: 'Lora', serif;
+font-family: 'Mooli', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Vollkorn', serif;
+}
+.toggle{
+    width: 15px;
+    height: 7px;
+    background-color: #9417e2;
+    border-radius: 30px;
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+}
+.toggle::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    border-radius: 50%;
+    top: 0.7px;
+    left: 1px;
+    transition: all 0.5s;
+    background-color: black;    
+}
+.checkbox:checked + .toggle::after{
+    left: 8px;
+}
+.checkbox{
+    display: none;
+}
+.checkbox:checked + .toggle{
+    background-color: #9417e2;
+}
+center{
+    color: white;
+    font-size: 16px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 16px;
+    margin-top: 10vh;
+    text-align: center;
+    margin-bottom: 20vh;
+}
+.me{
+    font-size: 16px;
+}
+.goat{
+    font-size: 32px;
+    font-weight: 600;
+}
+.lion{
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 20%;
+    height: 50%;
+}
+button{
+    background: linear-gradient(to right, #a594f9, #6247aa);
+    text-align: center;
+    width: 70%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    padding: 10px;
+}
+.man{
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 20%;
+    height: 50%;
+}
+.dog{
+    margin-top: 20px;
+}
+.lion:hover{
+   height: 40vh;
+   width: 30%;
+   background: linear-gradient(to right, #a594f9, #6247aa); 
+   transition: 0.3s;
+   text-align: center;
+padding-top: 50px;
+}
+.man:hover{
+    height: 70%;
+    background: linear-gradient(to right, #a594f9, #6247aa);
+    transition: 0.5s;
+
+}
+button:hover{
+    box-shadow: 5px 5px 3px goldenrod;
+    height: 6vh;
+    text-align: center;
+    background: linear-gradient(to right, white, whitesmoke);
+}
+@media screen and (max-width: 1000px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lion{
+        width: 40%;
+    }
+    .man{
+        width: 40%;
+        height: 30%;
+    }
+    button{
+        width: 40%;
+        height: 4vh;
+    }
+
+}
